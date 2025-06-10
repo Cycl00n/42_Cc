@@ -6,7 +6,7 @@
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:39:52 by clnicola          #+#    #+#             */
-/*   Updated: 2025/06/10 15:40:21 by clnicola         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:25:45 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	**ft_split(char const *s, char c)
 		{
 			len ++;
 		}
-		arr[k] = (char *) malloc((j + 1) * sizeof(char));
+		arr[k] = (char *) malloc((len + 1) * sizeof(char));
 		if (arr == NULL)
 		{
 			return (NULL);
@@ -90,17 +90,17 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int	main()
 {
 	char const *test_string1 = "punaise,ils parlent fort,les,lifeguards,,,";
     char delimiter1 = ',';
     char **result1;
-    int i;
+    int i = 0;
 	result1 = ft_split(test_string1, delimiter1);
 	while (result1[i] != NULL)
     {
         printf("Word %d: %s\n", i, result1[i]);
         i++;
     }
-}
+}*/
