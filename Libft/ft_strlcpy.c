@@ -5,14 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/30 16:44:21 by clnicola          #+#    #+#             */
-/*   Updated: 2025/05/30 17:36:10 by clnicola         ###   ########.fr       */
+/*   Created: 2025/06/10 10:40:14 by clnicola          #+#    #+#             */
+/*   Updated: 2025/06/10 14:47:08 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t sz)
 {
@@ -31,12 +30,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t sz)
 /*#include <stdio.h>
 int main()
 {
-	char dest_[4];
-	char src_[4] = {"Hello"};
+	char dest_[5];
+	char src_[5] = {"Hello"};
 
 	char* dest = dest_;
 	char* src = src_;
-	ft_strlcpy(dest,src; 2);
+	ft_strlcpy(dest,src, 2);
 
 	printf("dest: %s", dest);
 	return(0);

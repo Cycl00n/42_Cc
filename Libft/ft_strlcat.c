@@ -5,14 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/30 17:12:44 by clnicola          #+#    #+#             */
-/*   Updated: 2025/05/30 18:07:08 by clnicola         ###   ########.fr       */
+/*   Created: 2025/06/10 10:40:07 by clnicola          #+#    #+#             */
+/*   Updated: 2025/06/10 14:50:43 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t sz)
 {

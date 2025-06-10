@@ -5,17 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/05 16:19:20 by clnicola          #+#    #+#             */
-/*   Updated: 2025/06/05 16:51:25 by clnicola         ###   ########.fr       */
+/*   Created: 2025/06/10 10:40:38 by clnicola          #+#    #+#             */
+/*   Updated: 2025/06/10 14:43:00 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
-
-size_t	ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
-size_t	ft_strlcpy(char *dst, const char *src, size_t sz);
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

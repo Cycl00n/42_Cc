@@ -5,15 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/05 15:59:18 by clnicola          #+#    #+#             */
-/*   Updated: 2025/06/05 16:17:36 by clnicola         ###   ########.fr       */
+/*   Created: 2025/06/10 10:40:04 by clnicola          #+#    #+#             */
+/*   Updated: 2025/06/10 14:50:40 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
