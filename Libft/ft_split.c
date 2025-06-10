@@ -6,7 +6,7 @@
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:39:52 by clnicola          #+#    #+#             */
-/*   Updated: 2025/06/10 18:25:45 by clnicola         ###   ########.fr       */
+/*   Updated: 2025/06/10 19:44:07 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,74 +22,61 @@ static size_t	ft_words(char const *s, char c)
 	i = 0;
 	words = 0;
 	if (!s)
-	{
 		return (0);
-	}
 	while (s[i])
 	{
 		while (s[i] && s[i] == c)
-		{
 			i ++;
-		}
 		if (s[i])
-		{
 			words ++;
-		}
 		while (s[i] && s[i] != c)
-		{
 			i ++;
-		}
 	}
 	return (words);
 }
 
+static void	ft_allocate(char **arr, char const *s, char c)
+{
+	char		**arr1;
+	char const	*tmp;
+
+	tmp = s;
+	arr1 = arr;
+	while (*tmp)
+	{
+		while (*s == c)
+			++s;
+		tmp = s;
+		while (*tmp && *tmp != c)
+			++tmp;
+		if (*tmp == c || tmp > s)
+		{
+			*arr1 = ft_substr(s, 0, tmp - s);
+			s = tmp;
+			++arr1;
+		}
+	}
+	*arr1 = NULL;
+}
+
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	size_t	len;
 	char	**arr;
+	int		size;
 
-	i = 0;
-	k = 0;
-	arr = (char **) malloc((ft_words(s, c) + 1) * sizeof(char *));
-	if (arr == NULL || s == NULL)
+	if (!s)
 	{
 		return (NULL);
 	}
-	while (s[i])
+	size = ft_words(s, c);
+	arr = (char **)malloc(sizeof(char *) * (size + 1));
+	if (!arr)
 	{
-		while (s[i] && s[i] == c)
-		{
-			i ++;
-		}
-		if (!s[i])
-		{
-			break ;
-		}
-		len = 0;
-		while (s[i + len] && s[i + len] != c)
-		{
-			len ++;
-		}
-		arr[k] = (char *) malloc((len + 1) * sizeof(char));
-		if (arr == NULL)
-		{
-			return (NULL);
-		}
-		j = 0;
-		while (j < len)
-		{
-			arr[k][j++] = s[i++];
-		}
-		arr[k][j] = '\0';
-		k ++;
+		return (NULL);
 	}
-	arr[k] = NULL;
+	ft_allocate(arr, s, c);
 	return (arr);
 }
-
 /*#include <stdio.h>
 int	main()
 {
