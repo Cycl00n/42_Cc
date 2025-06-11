@@ -6,12 +6,10 @@
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:39:52 by clnicola          #+#    #+#             */
-/*   Updated: 2025/06/10 19:44:07 by clnicola         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:58:43 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
 static size_t	ft_words(char const *s, char c)
@@ -38,23 +36,22 @@ static size_t	ft_words(char const *s, char c)
 static void	ft_allocate(char **arr, char const *s, char c)
 {
 	char		**arr1;
-	char const	*tmp;
+	char const	*str;
 
-	tmp = s;
 	arr1 = arr;
-	while (*tmp)
+	while (*s)
 	{
 		while (*s == c)
 			++s;
-		tmp = s;
-		while (*tmp && *tmp != c)
-			++tmp;
-		if (*tmp == c || tmp > s)
+		str = s;
+		while (*str && *str != c)
+			++str;
+		if (str > s)
 		{
-			*arr1 = ft_substr(s, 0, tmp - s);
-			s = tmp;
+			*arr1 = ft_substr(s, 0, str - s);
 			++arr1;
 		}
+		s = str;
 	}
 	*arr1 = NULL;
 }
@@ -65,18 +62,15 @@ char	**ft_split(char const *s, char c)
 	int		size;
 
 	if (!s)
-	{
 		return (NULL);
-	}
 	size = ft_words(s, c);
 	arr = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!arr)
-	{
 		return (NULL);
-	}
 	ft_allocate(arr, s, c);
 	return (arr);
 }
+
 /*#include <stdio.h>
 int	main()
 {

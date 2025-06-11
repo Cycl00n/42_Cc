@@ -6,12 +6,10 @@
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:40:04 by clnicola          #+#    #+#             */
-/*   Updated: 2025/06/10 14:50:40 by clnicola         ###   ########.fr       */
+/*   Updated: 2025/06/11 10:24:19 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

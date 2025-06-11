@@ -6,19 +6,22 @@
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:40:14 by clnicola          #+#    #+#             */
-/*   Updated: 2025/06/10 14:47:08 by clnicola         ###   ########.fr       */
+/*   Updated: 2025/06/11 17:08:14 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t sz)
 {
 	size_t	i;
+	size_t	len;
 
+	len = ft_strlen(src);
 	i = 0;
-	while (src[i] && i < sz)
+	if (sz == 0)
+		return(len);
+	while (src[i] && i < sz - 1)
 	{
 		dst[i] = src[i];
 		i++;

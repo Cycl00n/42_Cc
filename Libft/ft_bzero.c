@@ -6,11 +6,11 @@
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:38:40 by clnicola          #+#    #+#             */
-/*   Updated: 2025/06/10 10:38:42 by clnicola         ###   ########.fr       */
+/*   Updated: 2025/06/11 10:23:27 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

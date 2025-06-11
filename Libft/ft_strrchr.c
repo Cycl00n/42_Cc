@@ -6,11 +6,10 @@
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:40:34 by clnicola          #+#    #+#             */
-/*   Updated: 2025/06/10 19:22:20 by clnicola         ###   ########.fr       */
+/*   Updated: 2025/06/11 10:24:48 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

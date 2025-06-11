@@ -6,11 +6,11 @@
 /*   By: clnicola <clnicola@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 10:39:36 by clnicola          #+#    #+#             */
-/*   Updated: 2025/06/10 10:39:38 by clnicola         ###   ########.fr       */
+/*   Updated: 2025/06/11 10:23:50 by clnicola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

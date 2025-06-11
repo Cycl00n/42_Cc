@@ -1,6 +1,7 @@
 
 NAME = libft.a
 OBJS = $(SOURCES:.c=.o)
+BONUS_OBJS = $(BONUS_SRCS:.c:.o)
 CC = cc
 C_FLAGS = -Wall -Wextra -Werror
 SRC_DIR = Libft
@@ -30,7 +31,19 @@ SOURCES = \
 	ft_memmove.c \
 	ft_strjoin.c \
 	ft_strncmp.c \
-	ft_substr.c
+	ft_substr.c \
+	ft_split.c \
+	ft_strmapi.c \
+	ft_striteri.c \
+	ft_itoa.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c
+
+BONUS_SRCS = \
+	ft_lstnew.c 
+
 HEADER = libft.h
 
 NAME:
@@ -50,8 +63,13 @@ clean:
 	rm -f $(OBJS)
 	@echo "Temp files removed"
 
-fclean : clean
+fclean: clean
 	rm -f $(NAME)
 	@echo "Temp files and binaries removed."
 	
 re: fclean all
+
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rc $(NAME) $(OBJS) $(BONUS_OBJS)
+	ranlib $(NAME)
+	@echo "$(NAME) with bonus created."
